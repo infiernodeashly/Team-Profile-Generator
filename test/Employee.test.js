@@ -22,9 +22,10 @@ test("Can set email via constructor argument", () => {
   const e = new Employee("Foo", 1, testValue);
   expect(e.email).toBe(testValue);
 });
-
+// This is different than testing setting the name. It tests being able to pull the name in the first place before setting.
 test("Can get name via getName()", () => {
   const testValue = "Alice";
+  // notice the below Employee class is calling the testVaue variable above versus just an empty Employee class like line 8. 
   const e = new Employee(testValue);
   expect(e.getName()).toBe(testValue);
 });
