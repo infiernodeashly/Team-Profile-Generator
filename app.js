@@ -138,18 +138,21 @@ function startHtml() {
             font-size: 20px;
             color: white;
             text-align: center;
+            line-height: .8;
         }
         .card-headerEng{
             background-color: blue;
             font-size: 20px;
             color: white;
             text-align: center;
+            line-height: .8;
         }
         .card-headerInt{
             background-color: green;
             font-size: 20px;
             color: white;
             text-align: center;
+            line-height: .8;
         }
         .card-margin{
             margin: 10px;
@@ -190,8 +193,8 @@ function addHtml(member) {
             <div class="card-margin card mx-auto mb-3" style="width: 15rem">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
-                <li class="list-group-item">GitHub: ${gitHub}</li>
+                <li class="list-group-item">Email Address: <a href="mailto:${email}"> ${email}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${gitHub}" target="_blank"> ${gitHub}</a></li>
             </ul>
             </div></div>
         </div>`;
@@ -203,7 +206,7 @@ function addHtml(member) {
             <div class="card-margin card mx-auto mb-3" style="width: 15rem">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
+                <li class="list-group-item">Email Address: <a href="mailto:${email}"> ${email}</a></li>
                 <li class="list-group-item">School: ${school}</li>
             </ul>
             </div></div>
@@ -216,7 +219,7 @@ function addHtml(member) {
             <div class="card-margin card mx-auto mb-3" style="width: 15rem">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
+                <li class="list-group-item">Email Address: <a href="mailto:${email}"> ${email}</a></li>
                 <li class="list-group-item">Office Phone: ${officePhone}</li>
             </ul>
             </div></div>
