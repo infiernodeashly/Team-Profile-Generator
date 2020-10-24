@@ -125,6 +125,8 @@ function startHtml() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <title>Team Profile</title>
         <style>
         .navbar-format{
@@ -154,12 +156,13 @@ function startHtml() {
         }
         .card-bkg{
             background-color: rgb(192, 192, 192);
+            box-shadow: 5px 5px 3px lightgrey;
         }
         </style>
 
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark mb-5">
+        <nav class="navbar navbar-format mb-5">
             <span class="navbar-brand mb-0 h1 w-100 text-center">Team Profile</span>
         </nav>
         <div class="container">
@@ -182,38 +185,41 @@ function addHtml(member) {
         if (role === "Engineer") {
             const gitHub = member.getGithub();
             data = `<div class="col-6">
-            <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Engineer</h5>
+            <div class="card-bkg card mx-auto mb-3" style="width: 18rem">
+            <h5 class="card-header card-headerEng">${name}<br /><br />Engineer <i class="fa fa-gear fa-spin" style="font-size:24px"></i></h5>
+            <div class="card-margin card mx-auto mb-3" style="width: 15rem">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email Address: ${email}</li>
                 <li class="list-group-item">GitHub: ${gitHub}</li>
             </ul>
-            </div>
+            </div></div>
         </div>`;
         } else if (role === "Intern") {
             const school = member.getSchool();
             data = `<div class="col-6">
-            <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Intern</h5>
+            <div class="card-bkg card mx-auto mb-3" style="width: 18rem">
+            <h5 class="card-header card-headerInt">${name}<br /><br />Intern <i class='fas fa-user-graduate' style='font-size:24px'></i></h5>
+            <div class="card-margin card mx-auto mb-3" style="width: 15rem">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email Address: ${email}</li>
                 <li class="list-group-item">School: ${school}</li>
             </ul>
-            </div>
+            </div></div>
         </div>`;
         } else {
             const officePhone = member.getOfficeNumber();
             data = `<div class="col-6">
-            <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Manager</h5>
+            <div class="card-bkg card mx-auto mb-3" style="width: 18rem">
+            <h5 class="card-header card-headerMgr">${name}<br /><br />Manager <i class="fas fa-project-diagram"></i></h5>
+            <div class="card-margin card mx-auto mb-3" style="width: 15rem">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email Address: ${email}</li>
                 <li class="list-group-item">Office Phone: ${officePhone}</li>
             </ul>
-            </div>
+            </div></div>
         </div>`
         }
         console.log("adding team member");
