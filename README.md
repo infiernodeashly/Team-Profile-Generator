@@ -28,7 +28,8 @@ Open integrated terminal and type "npm i" to install packages. Be sure the follo
 
 ## Usage
 
-To run the program, open the integrated Terminal within the application folder and type node app.js, after installing packages. Follow and complete prompts. The results will be published in a file named team.html. This can be opened and viewed in your browser. [![Watch the video] (https://youtu.be/fBiYNb8nm0g) ![](./assets/TeamProfileGenerator.gif)
+To run the program, open the integrated Terminal within the application folder and type node app.js, after installing packages. Follow and complete prompts. The results will be published in a file named team.html. This can be opened and viewed in your browser. [![Watch the video] (https://youtu.be/fBiYNb8nm0g) 
+![](./assets/TeamProfileGenerator.gif)
 
 ## License <img src="http://img.shields.io/badge/license-The Unlicense-blue">
 
